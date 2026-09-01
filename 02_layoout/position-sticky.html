@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang='ko'
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pistition - Stickey</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <!-- header
+    1. fixed: 요소를 화면에 고정시킵니다. 스크롤 시에도 항상 보이게 됩니다.
+    2. left-0, right-0: 요소를 화면의 왼쪽과 오른쪽에 붙입니다.
+    3. bg-gray-800: 배경색을 회색으로 설정합니다.
+    4. text-white: 글자색을 흰색으로 설정합니다.
+    5. p-4: 내부 여백을 설정합니다. (padding: 1rem;)
+    6. z-50: z-index를 설정하여 다른 요소보다 위에 표시되도록 합니다.
+  -->
+  <header class="fixed left-0 right-0 bg-gray-800 text-white p-4 z-50">
+      <nav class="container mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold">MyShop</div>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Products</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+  <!-- main
+   1. aside: 사이드바 영역을 나타냅니다.
+     가. w-2/5: 너비를 2/5로 설정합니다.
+     나. div: 사이드바 내부 컨텐츠를 감싸는 요소입니다.
+       1). sticky: 요소를 스크롤 시에도 일정 위치에 고정시킵니다.
+       2). top-16: 상단에서 4rem(64px) 떨어진 위치에 고정됩니다.
+       3). border: 테두리를 추가합니다.
+       4). p-6: 내부 여백을 설정합니다. (padding: 1.5rem;)
+       5). border-gray-200: 테두리 색상을 회색으로 설정합니다.
+       6). shadow-md: 그림자 효과를 추가합니다.
+     ......
+   2. div: 메인 콘텐츠 영역을 나타냅니다.
+     가. w-3/5: 너비를 3/5로 설정합니다.
+     나. section: 이미지 그리드 영역을 나타냅니다.
+       1). grid: CSS Grid 레이아웃을 사용합니다.
+       2). grid-cols-2: 2개의 열로 구성된 그리드를 생성합니다.
+       3). gap-2: 그리드 아이템 간의 간격을 설정합니다. (gap: 0.5rem;)
+       4). img: 각 이미지를 나타냅니다.
+         가). w-full: 너비를 부모 요소에 맞게 설정합니다.
+         나). h-full: 높이를 부모 요소에 맞게 설정합니다.
+         다). rounded-lg: 모서리를 둥글게 만듭니다.
+         라). shadow-md: 그림자 효과를 추가합니다.
+  -->
+  <main class="container max-w-5xl mx-auto px-4 pb-8 pt-24 flex gap-x-4">
+    <aside class="w-2/5">
+      <div class="sticky top-16 border p-6 border-gray-200 shadow-md">
+        <h1 class="text-3xl font-bold mb-4">장바구니</h1>
+        <div class="space-y-2">
+          <div class="flex justify-between">
+              <span>상품 1</span>
+              <span>₩ 10,000</span>
+            </div>
+            <div class="flex justify-between">
+              <span>상품 2</span>
+              <span>₩ 20,000</span>
+            </div>
+            <div class="flex justify-between font-bold border-t pt-2">
+              <span>총합계</span>
+              <span>₩ 30,000</span>
+            </div>
+        </div>
+      </div>
+    </aside>
+    <div class="w-3/5">
+      <section class="grid grid-cols-2 gap-2">
+        <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=City"
+            alt="City Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=Landscape"
+            alt="Landscape Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=Mountain"
+            alt="Mountain Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=River"
+            alt="River Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=Forest"
+            alt="Forest Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=Ocean"
+            alt="Ocean Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=Desert"
+            alt="Desert Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=Waterfall"
+            alt="Waterfall Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=Beach"
+            alt="Beach Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />          
+          <img
+            src="https://dummyimage.com/400x400/cccccc/000000&text=None"
+            alt="None Image"
+            class="w-full h-full rounded-lg shadow-md"
+          />
+      </section>
+    </div>
+  </main>
+      
+  
+</body>
+</html>
