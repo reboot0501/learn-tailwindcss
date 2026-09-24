@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang='ko'
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <!--GNB header tag class - 메인 메뉴 좌측, Login 버튼 우측정렬
+  <header> tag 내에 <div>로고</div>, <div><nav><ul>메뉴</ul></nav><div>로그인 버튼</div></div> 두개의 영역으로 나누고 
+    1. flex : 자식 요소 인 <div>로고</div>, nav, div 를 가로로 배치
+    2. items-center : 자식 요소들을 수직 Y 축 중앙 정렬
+    3. gap-6 : 자식 요소들 사이에 간격을 설정합니다. (gap: 1.5rem; 24px)
+  -->
+  <header class="bg-gray-200 mt-6 p-6 rounded-lg flex items-center gap-6">
+    <!-- 로고 영역 
+      1. text-2xl : 글자 크기를 2xl로 설정합니다. (font-size: 1.5rem;, 24px)
+      2. font-bold : 글자 두께를 굵게 설정합니다. (font-bold: 700;)
+    -->
+    <div class="text-2xl font-bold">로고</div>
+    <!-- 메뉴 & 버튼 영역 (items-center 추가로 수직 정렬 일치) 
+      1. flex : 자식 요소 인 nav, button 을 가로로 배치
+      2. flex-1 : flexbox 레이아웃에서 nav, button tag 가 로고를 제외한 남은 공간을 차지하도록 합니다. 
+      3. justify-between : 자식 요소들을 좌우로 분리하여 배치
+      4. items-center : 자식 요소들을 수직 Y 축 중앙 정렬
+    -->
+    <div class="flex flex-1 justify-between items-center">
+      <nav>
+        <!-- nav tag class
+          1. flex : 자식 요소 인 ul 들을 가로로 배치
+          2. gap-4 : 자식 요소들 사이에 간격을 설정합니다. (gap: 1rem; 16px)
+        -->
+        <ul class="flex gap-4">
+          <li><a href="#" class="text-gray-500 hover:text-gray-900">Home</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-gray-900">About</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-gray-900">Services</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-gray-900">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- button tag class 
+        1. bg-blue-500 : 배경색을 파란색으로 설정
+        2. text-white : 글자색을 흰색으로 설정
+        3. py-2 : 상하 여백을 설정 (padding-top, padding-bottom: 0.5rem;)
+        4. px-4 : 좌우 여백을 설정 (padding-left, padding-right: 1rem;)
+        5. rounded : 모서리를 둥글게 설정
+        6. hover:bg-blue-700 : 마우스 오버 시 배경색을 진한 파란색으로 변경       
+      -->
+      <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+        Login
+      </button>
+    </div>
+  </header>
+  
+  <!-- main tag class 
+    1. container : 요소의 너비를 현재 브레이크포인트에 고정합니다. (width: 100%;)
+    2. max-w-lg : 요소의 최대 너비를 768px로 설정합니다. (max-width: 768px;)
+    3. p-4 : 요소의 상하좌우 여백을 설정합니다. (padding-top, padding-bottom, padding-left, padding-right: 1rem;)
+  -->
+  <main class="container max-w-lg p-4">
+    <!-- Grid 레이아웃 - grid 는 복잡한 2차원 레이아웃을 그성하기 위해 사용되는 속성
+      1. grid : grid 레이아웃을 사용하기 위한 속성
+      2. grid-cols-3 : grid 레이아웃의 열 개수를 3개로 설정
+      3. gap-2 : grid 레이아웃의 자식 요소들 사이의 간격을 2px로 설정
+    -->
+    <div class="grid grid-rows-3 grid-cols-3 gap-2">
+        <!-- img tag class
+          1. w-full : 너비를 부모 요소의 100%로 설정합니다. (width: 100%;)
+          2. h-full : 높이를 부모 요소의 100%로 설정합니다. (height: 100%;)
+          3. rounded : 모서리를 둥글게 설정
+          4. shadow-md : 그림자를 설정
+        -->
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=City"
+          alt="City Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=Landscape"
+          alt="Landscape Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=Mountain"
+          alt="Mountain Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=River"
+          alt="River Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=Forest"
+          alt="Forest Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=Ocean"
+          alt="Ocean Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=Desert"
+          alt="Desert Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=Waterfall"
+          alt="Waterfall Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=Beach"
+          alt="Beach Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+    </div>
+  </main>
+</body>
+</html>

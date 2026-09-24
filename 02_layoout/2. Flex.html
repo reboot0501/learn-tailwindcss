@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang='ko'
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- GNB header Tag Class - 메뉴 링크 중앙 배치
+      <header> tag 내에 <div>로고</div>, <nav><ul>메뉴</ul></nav>, <div>로그인 버튼</div> 세개의 영역으로 나누고 
+      1. flex : 자식 요소 인 div, ul, div 를 가로로 배치
+      2. justify-between : 자식 요소들을 좌우로 분리하여 배치 
+      3. items-center : 자식 요소들을 수직 Y 축 중앙 정렬
+    -->
+    <header class="bg-gray-200 mt-6 p-6 rounded-lg mb-6 flex justify-between items-center">
+      <!-- 좌측: 로고 div tag Class 
+        1. text-2xl : 글자 크기를 2xl로 설정합니다. (font-size: 1.5rem; 24px)
+        2. font-bold : 글자 두께를 굵게 설정합니다. (font-bold;)
+      -->
+      <div class="text-2xl font-bold">로고</div>
+
+      <!-- 중앙: 네비게이션 링크 (nav 내부의 불필요한 flex 속성 정리) -->
+      <nav>
+        <!-- 네비게이션 링크 ul tag class
+          1. flex: 자식 요소 인 li Tag 를 가로로 배치
+          2. gap-4: 자식 요소들 사이에 간격을 설정합니다. (gap: 1rem; 16px)
+        -->
+        <ul class="flex gap-4">
+          <li><a href="#" class="text-gray-500 hover:text-gray-900">Home</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-gray-900">About</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-gray-900">Services</a></li>
+          <li><a href="#" class="text-gray-500 hover:text-gray-900">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- div tag class
+        1. bg-blue-500: 배경색을 파란색으로 설정합니다. (background-color: #3b82f6;)
+        2. text-white: 글자색을 흰색으로 설정합니다. (color: #ffffff;)
+        3. py-2: 상하 여백을 설정합니다. (padding-top, padding-bottom: 0.5rem;)
+        4. px-4: 좌우 여백을 설정합니다. (padding-left, padding-right: 1rem;)
+        5. rounded: 모서리를 둥글게 설정합니다. (border-radius: 0.25rem;)
+        6. hover:bg-blue-700: 마우스 오버 시 배경색을 진한 파란색으로 변경합니다. (background-color: #1d4ed8;)
+      -->
+      <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+        Login
+      </button>
+    </header>
+    
+    <!-- GNB header tag class - 메뉴 링크와 로그인 버튼을 묶어 우측으로 배치
+      <header> tag 내에 <div>로고</div>, <div><nav><ul>메뉴</ul></nav><div>로그인 버튼</div></div> 두개의 영역으로 나누고 
+      로고 영역을 할당하여 나머지 영역을 flex-1 로 할당  
+      1. flex : Flexbox 레이아웃을 적용하여 자식 요소 div, nav, div 들을 가로로 배치합니다.
+      2. items-center : 자식 요소들을 y 축 수직 중앙 정렬합니다.
+    -->
+    <header class="bg-gray-200 mt-6 p-6 rounded-lg mb-6 flex items-center">
+      <!-- 로고 영역
+       1. text-2xl : 글자 크기를 2xl로 설정합니다. (font-size: 1.5rem;, 24px)
+       2. font-bold : 글자 두께를 굵게 설정합니다. (font-bold: 700;)
+      -->
+      <div class="text-2xl font-bold">로고</div>
+      <!-- 메뉴 링크 영역
+       1. flex-1 : flexbox 레이아웃에서 div tag 가 로고를 제외한 남은 공간을 차지하도록 합니다.
+       2. flex : flexbox 레이아웃을 적용하여 자식 요소 nav 와 div button 을 가로로 배치합니다.
+       3. justify-end : 자식 요소들을 x축으로 끝에 배치합니다.
+       4. items-center : 자식 요소들을 y축으로 중앙 정렬합니다.
+       5. space-x-6 : 자식 요소들 사이에 x축 간격을 설정합니다. (gap: 1.5rem;, 24px)
+      -->
+      <div class="flex-1 flex justify-end items-center space-x-6">
+        <!-- 메뉴 링크 영역
+        -->
+        <nav>
+          <!-- ul tag class
+             1. flex: 자식 요소 li 태그(원래 세로로 떨어지는 요소들)를 가로로 배치합니다.
+             2. gap-4: 자식 요소들 사이에 간격을 설정합니다. (gap: 1rem;, 16px)
+          -->
+          <ul class="flex gap-4">
+            <li><a href="#" class="text-gray-500 hover:text-gray-900">Home</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900">About</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900">Services</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- 로그인 버튼 영역
+        -->
+        <button
+          class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+        >
+          Login
+        </button>
+      </div>
+    </header>
+    
+    <!--GNB header tag class - 메인 메뉴 좌측, Login 버튼 우측정렬
+    <header> tag 내에 <div>로고</div>, <div><nav><ul>메뉴</ul></nav><div>로그인 버튼</div></div> 두개의 영역으로 나누고 
+      1. flex : 자식 요소 인 <div>로고</div>, nav, div 를 가로로 배치
+      2. items-center : 자식 요소들을 수직 Y 축 중앙 정렬
+      3. gap-6 : 자식 요소들 사이에 간격을 설정합니다. (gap: 1.5rem; 24px)
+    -->
+    <header class="bg-gray-200 mt-6 p-6 rounded-lg flex items-center gap-6">
+      <!-- 로고 영역 
+       1. text-2xl : 글자 크기를 2xl로 설정합니다. (font-size: 1.5rem;, 24px)
+       2. font-bold : 글자 두께를 굵게 설정합니다. (font-bold: 700;)
+      -->
+      <div class="text-2xl font-bold">로고</div>
+      <!-- 메뉴 & 버튼 영역 (items-center 추가로 수직 정렬 일치) 
+       1. flex : 자식 요소 인 nav, button 을 가로로 배치
+       2. flex-1 : flexbox 레이아웃에서 nav, button tag 가 로고를 제외한 남은 공간을 차지하도록 합니다. 
+       3. justify-between : 자식 요소들을 좌우로 분리하여 배치
+       4. items-center : 자식 요소들을 수직 Y 축 중앙 정렬
+      -->
+      <div class="flex flex-1 justify-between items-center">
+        <nav>
+          <!-- nav tag class
+            1. flex : 자식 요소 인 ul 들을 가로로 배치
+            2. gap-4 : 자식 요소들 사이에 간격을 설정합니다. (gap: 1rem; 16px)
+          -->
+          <ul class="flex gap-4">
+            <li><a href="#" class="text-gray-500 hover:text-gray-900">Home</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900">About</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900">Services</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-900">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- button tag class 
+         1. bg-blue-500 : 배경색을 파란색으로 설정
+         2. text-white : 글자색을 흰색으로 설정
+         3. py-2 : 상하 여백을 설정 (padding-top, padding-bottom: 0.5rem;)
+         4. px-4 : 좌우 여백을 설정 (padding-left, padding-right: 1rem;)
+         5. rounded : 모서리를 둥글게 설정
+         6. hover:bg-blue-700 : 마우스 오버 시 배경색을 진한 파란색으로 변경       
+        -->
+        <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+          Login
+        </button>
+      </div>
+    </header>
+</body>
+</html>

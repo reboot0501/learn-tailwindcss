@@ -7,12 +7,12 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <!--
+    <!-- main tag 클래스
       1. container: Tailwind CSS에서 제공하는 컨테이너 클래스는 반응형 레이아웃을 쉽게 만들 수 있도록 도와줍니다.
       2. mx-auto: 수평 중앙 정렬을 위해 사용됩니다. (margin-left: auto; margin-right: auto;)
       3. max-w-3xl: 최대 너비를 설정합니다. 여기서는 3xl (48rem, 768px)로 설정되어 있습니다.
       4. p-4: 내부 여백을 설정합니다. (padding: 1rem;)
-      5. space-y-8: 자식 요소들 사이에 수직 간격을 설정합니다. (margin-top: 2rem; margin-bottom: 2rem;)
+      5. space-y-8: 자식 요소(div 4개)들 사이에 수직 간격 8을 설정합니다. (margin-top: 2rem; margin-bottom: 2rem;)
     -->
     <main class="container mx-auto max-w-3xl p-4 space-y-8">
       <div>
@@ -46,6 +46,13 @@
         <p class="text-sky-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p class="text-red-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p class="text-[30px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div>
+        <h1 class="text-2xl mb-2">Typograpy : 텍스트 오버플로우</h1>
+        <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 종료.</p>
+        <p class="text-clip text-nowrap overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et do lore magna aliqua. 종료.</p>
+        <p class="text-nowrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 종료.</p>
+        <p class="text-ellipsis text-nowrap overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 종료.</p>
       </div>
     </main>
 

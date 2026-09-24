@@ -7,11 +7,22 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+  <!-- div block class
+    - space-y-3 : 자식 요소 사이의 간격을 y축으로 3만큼 - 자식 간의 세로 간격: 12px
+      . 원래 div Tag 는 세로로 표시됨 
+      . flex class 를 적용하면 가로로 표시됨 
+    - mb-6 : 요소 외부의 세로 여백을 6만큼 - 블록 요소 하단에 24px의 여유 공간
+  -->
   <div class="space-y-3 mb-6">
     <div class="w-32 h-32 bg-blue-600"></div>
     <div class="w-32 h-32 bg-blue-700"></div>
     <div class="w-32 h-32 bg-blue-800"></div>
   </div>
+  <!-- flex div block class
+    - space-x-6 : 자식 요소 사이의 간격을 x축으로 6만큼 - 자식 간의 가로 간격: 24px
+      . 원래 div Tag 는 세로로 표시됨 
+      . flex class 를 적용하면 가로로 표시됨 
+  -->
   <div class="space-x-6 flex">
     <div class="w-32 h-32 bg-blue-600"></div>
     <div class="w-32 h-32 bg-blue-700"></div>

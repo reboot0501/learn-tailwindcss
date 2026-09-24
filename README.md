@@ -135,3 +135,36 @@ module.exports = {
   ]
 }
 ```
+
+---
+
+## 4. Typograpy 스타일링
+
+### 4.1. 글꼴크기(text-)
+```html
+text-2xl, text-sm, text-lg
+```
+### 4.2. 글꼴두께(font-) 
+```html
+font-bold, font-sm, font-lg
+```
+### 4.3. 텍스트정렬(text-)
+```html
+text-center, text-left, text-right
+```
+### 4.4. 텍스트색상(text-)
+```html
+text-red-500, text-blue-500, text-green-500
+```
+### 4.5. 줄 간격(leading-)
+```html
+leading-none, leading-tight, leading-relaxed
+```
+### 4.6. 텍스트 오버플로우(text-)
+```html
+text-ellipsis, text-clip, text-nowrap
+```
+
+---
+
+## 5. 

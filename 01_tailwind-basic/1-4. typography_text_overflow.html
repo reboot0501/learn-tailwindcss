@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='ko'
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Text Overflow</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+  <article class="max-w-80 mx-auto p-6 bg-white rounded-lg border">
+    <!-- truncate : 한줄로 표시하고 넘치면 ...으로 표시 -->
+    <p class="truncate">truncate : Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. 종료</p>
+    
+    <!-- text-clip : 한줄로 표시하고 넘치면 잘라버림 
+      1. text-nowrap : 텍스트를 한줄로 표시
+      2. overflow-hidden  : 넘치는 텍스트를 숨김
+    -->
+    <p class="text-clip text-nowrap overflow-hidden">text-clip : Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. 종료</p>
+    
+    <!-- text-nowrap : 텍스트를 한줄로 표시 -->
+    <p class="text-nowrap">text-nowrap : Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. 종료</p>
+    <!-- text-ellipsis : 한줄로 표시하고 넘치면 ...으로 표시 
+      1. text-nowrap : 텍스트를 한줄로 표시
+      2. overflow-hidden  : 넘치는 텍스트를 숨김
+    -->
+    <p class="text-ellipsis text-nowrap overflow-hidden">text-ellipsis : Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. 종료</p>
+  </article>
+
+</body>
+</html>
