@@ -7,35 +7,35 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <header class="fixed left-0 right-0 bg-gray-800 p-4 text-white rounded-lg z-50">
-    <nav class="flex justify-start items-center gap-6">
-      <div class="text-2xl font-bold">My Shop</div>
-      <div class="flex flex-1 gap-4 items-center">
-        <ul class="flex gap-4">
-          <li><a href="#" class="font-bold text-gray-500 hover:text-white">Home</a></li>
-          <li><a href="#" class="font-bold text-gray-500 hover:text-white">About</a></li>
-          <li><a href="#" class="font-bold text-gray-500 hover:text-white">Services</a></li>
-          <li><a href="#" class="font-bold text-gray-500 hover:text-white">Contact</a></li>
-        </ul>
-        <button
-          class="ml-auto bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-        >
-          Login
-        </button>
-      </div>
-    </nav>
-  </header>
-  <!-- main
-    1. container: 요소의 너비를 현재 브레이크포인트에 고정하는 컴포넌트입니다.
-    |  Class    |  Breakpoint   |   Properties         |
-    | container |	 None	        | width: 100%;         |
-                |  sm (640px)   |	max-width: 640px;    |
-                |  md (768px)   | max-width: 768px;    |
-                |  lg (1024px)  | max-width: 1024px;   |
-                |  xl (1280px)  | max-width: 1280px;   |
-                |  2xl (1536px) | max-width: 1536px;   |
-
+  <!-- header 영역 브라우저 고정
+    1. fixed : 브라우저 창을 스크롤해도 header 영역이 고정되어 표시됩니다. 
+    2. w-full : 너비를 부모 요소의 100%로 설정합니다. (width: 100%;)
+    3. bg-gray-300 : 배경색을 회색으로 설정합니다. (background-color: rgb(209 213 219);)
+    4. p-6 : 요소의 상하좌우 여백을 설정합니다. (padding-top, padding-bottom, padding-left, padding-right: 1.5rem;)
+    5. flex : flexbox 레이아웃을 사용하기 위한 속성
+    6. gap-6 : 자식 요소들 사이의 간격을 6px로 설정합니다. (gap: 1.5rem; 24px)
+    7. items-center : 자식 요소들을 수직 Y 축 중앙 정렬
+    8. z-50 : 다른 요소보다 상대적으로 상위 레이어에 고정
   -->
+  <header class="fixed w-full bg-gray-300 p-6 flex gap-6 items-center z-50">
+    <div class="text-3xl font-black text-white">My Shop</div>
+    <div class="flex-1 flex gap-6 justify-between items-center">
+      <nav>
+        <ul>
+          <li>
+            <a href="" class="text-gray-500 font-bold hover:text-gray-950">Home</a>
+            <a href="" class="text-gray-500 font-bold hover:text-gray-950">About</a>
+            <a href="" class="text-gray-500 font-bold hover:text-gray-950">Services</a>
+            <a href="" class="text-gray-500 font-bold hover:text-gray-950">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="text-white bg-blue-500 hover:bg-blue-700 rounded-sm px-2 py-4"
+      >로그인
+      </button>
+    </div>
+  </header>
+
   <main class="container max-w-2xl mx-auto px-4 pb-8 pt-20">
     <div class="grid grid-cols-2 gap-2">
         <img
@@ -81,6 +81,11 @@
         <img
           src="https://dummyimage.com/400x400/cccccc/000000&text=Beach"
           alt="Beach Image"
+          class="w-full h-full rounded-lg shadow-md"
+        />
+        <img
+          src="https://dummyimage.com/400x400/cccccc/000000&text=Face"
+          alt="Face Image"
           class="w-full h-full rounded-lg shadow-md"
         />
     </div>

@@ -57,13 +57,14 @@
     2. max-w-lg : 요소의 최대 너비를 768px로 설정합니다. (max-width: 768px;)
     3. p-4 : 요소의 상하좌우 여백을 설정합니다. (padding-top, padding-bottom, padding-left, padding-right: 1rem;)
   -->
-  <main class="container max-w-lg p-4">
+  <main class="container max-w-5xl mx-auto p-4">
     <!-- Grid 레이아웃 - grid 는 복잡한 2차원 레이아웃을 그성하기 위해 사용되는 속성
       1. grid : grid 레이아웃을 사용하기 위한 속성
+        - grid-rows-3 : 생략하면 gird-cols-? 로 rows 정해놓지 않고 처리 할 수 있다.
       2. grid-cols-3 : grid 레이아웃의 열 개수를 3개로 설정
       3. gap-2 : grid 레이아웃의 자식 요소들 사이의 간격을 2px로 설정
     -->
-    <div class="grid grid-rows-3 grid-cols-3 gap-2">
+    <div class="grid grid-cols-3 gap-2">
         <!-- img tag class
           1. w-full : 너비를 부모 요소의 100%로 설정합니다. (width: 100%;)
           2. h-full : 높이를 부모 요소의 100%로 설정합니다. (height: 100%;)
