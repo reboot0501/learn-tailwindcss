@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='ko'
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +14,24 @@
     1. flex : 자식 요소들을 가로로 배치
     2. gap-6 : 자식 요소들 사이 간격 6
     3. bg-gray-500 : 배경색 회색
-    4. px-4 py-6 : 패딩 4, 6
+    4. px-4 py-3 : 패딩 4, 3
     5. items-center : 자식 요소들을 수직으로 가운데 정렬
     6. h-20 : 높이 20
     7. shrink-0 : 자식 요소들이 줄어들지 않도록 방지
   -->
-  <header class="flex gap-6 bg-gray-500 px-4 py-6 items-center h-20 shrink-0">
-    <div class="w-1/5 text-3xl font-black text-white">로고</div>
-    <div class="w-4/5 flex gap-6 justify-between items-center">
-      <nav>
-        <ul class="flex gap-6">
-          <li><a href="" class="text-white hover:text-gray-950 hover:font-bold">Home</a></li>
-          <li><a href="" class="text-white hover:text-gray-950 hover:font-bold">About</a></li>
-          <li><a href="" class="text-white hover:text-gray-950 hover:font-bold">Services</a></li>
-          <li><a href="" class="text-white hover:text-gray-950 hover:font-bold">Contact</a></li>
+  <header class="flex gap-6 bg-gray-500 px-4 py-3 items-center h-20 shrink-0">
+    <div class="w-1/5 text-3xl font-black text-white shrink-0">로고</div>
+    <div class="w-4/5 flex gap-4 justify-between items-center min-w-0">
+      <!-- Top 탭 목록 컨테이너 -->
+      <nav class="flex-1 overflow-x-auto min-w-0">
+        <ul id="tab-list" class="flex gap-2 items-center">
+          <!-- 기본 Home 탭 -->
+          <li class="tab-item flex items-center gap-2 bg-white text-gray-900 px-3 py-1.5 rounded-lg text-sm font-bold shadow-sm cursor-pointer transition-colors" data-id="home" data-name="Home">
+            <span>Home</span>
+          </li>
         </ul>
       </nav>
-      <div class="px-4 py-5 bg-blue-500 text-white hover:bg-blue-950 rounded-lg">로그인</div>
+      <div class="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 rounded-lg cursor-pointer text-sm shrink-0">로그인</div>
     </div>
   </header>
   <!-- page tag class
@@ -40,14 +41,14 @@
         메뉴가 많아지면 브라우저 하단을 뚫고 내려갈 수 있습니다. 
       - min-h-0을 주어야 부모 영역 높이를 넘지 않고 자식 <aside>의 overflow-y-auto 스크롤이 정상 작동합니다.
     3. flex : <aside><main>를 좌우로 배치
-    4. gap-6 : <aside>와 <main> 사이 간격 6
+    4. gap-1 : <aside>와 <main> 사이 간격 1
   -->
   <page class="flex-1 min-h-0 flex gap-1">
     <!-- LNB  aside tag class
       1. w-1/5 : 전체 너비의 1/5 차지
       2. bg-gray-200 : 배경색 회색
       3. p-4 : 패딩 4
-      4. overflow-y-auto : 세로 스크롤
+      4. overflow-y-scroll : 무조건 세로 스크롤
     -->
     <aside class="w-1/5 bg-gray-200 p-4 overflow-y-scroll">
       <nav>
@@ -58,27 +59,39 @@
         -->
         <ul class="py-6 flex flex-col gap-6">
           <li>
-            <!-- a tag class 
-              1. block : 
-                - 기본적으로 a tag 는 글자 크기만큼만 차지하는 inline 요소
-                - block 으로 한 줄 전체(가로 100%)를 차지하게 되어, 텍스트뿐만 아니라 해당 줄의 빈 공간을 클릭해도 링크가 눌림
-              2. px-3 py-2 : 패딩 3, 2
-              3. rounded : 둥근 모서리
-              4. hover:bg-gray-500 : 마우스를 올리면 배경색 회색
-            -->
-            <a href="" 
-              class="block px-3 py-2 rounded hover:bg-gray-500"
+            <a href="#" 
+              data-id="menu-a"
+              data-name="메뉴 A"
+              class="lnb-menu block px-3 py-2 rounded hover:bg-gray-400 hover:text-white cursor-pointer transition-colors"
             >메뉴 A</a>
           </li>
           <li>
-            <a href="" 
-              class="block px-3 py-2 rounded hover:bg-gray-500" 
+            <a href="#" 
+              data-id="menu-b"
+              data-name="메뉴 B"
+              class="lnb-menu block px-3 py-2 rounded hover:bg-gray-400 hover:text-white cursor-pointer transition-colors" 
             >메뉴 B</a>
           </li>
           <li>
-            <a href=""
-              class="block px-3 py-2 rounded hover:bg-gray-500"
+            <a href="#"
+              data-id="menu-c"
+              data-name="메뉴 C"
+              class="lnb-menu block px-3 py-2 rounded hover:bg-gray-400 hover:text-white cursor-pointer transition-colors"
             >메뉴 C</a>
+          </li>
+          <li>
+            <a href="#"
+              data-id="menu-d"
+              data-name="메뉴 D"
+              class="lnb-menu block px-3 py-2 rounded hover:bg-gray-400 hover:text-white cursor-pointer transition-colors"
+            >메뉴 D</a>
+          </li>
+          <li>
+            <a href="#" 
+              data-id="menu-e"
+              data-name="메뉴 E"
+              class="lnb-menu block px-3 py-2 rounded hover:bg-gray-400 hover:text-white cursor-pointer transition-colors"
+            >메뉴 E</a>
           </li>
         </ul>
       </nav>
@@ -97,7 +110,7 @@
         3. border-b : 아래 border 
       -->
       <section class="shrink-0 p-4 border-b">
-        <h1 class="text-2xl font-semibold">화면 제목</h1>
+        <h1 id="page-title" class="text-2xl font-semibold">Home</h1>
       </section>
       <!-- 검색조건 form tag class 
         1. shrink-0 : flex 컨테이너에서 높이가 줄어들지 않도록 고정 (height: auto 대신)
@@ -189,7 +202,6 @@
         2. min-h-0 : 자식 요소(table)가 부모보다 클 때 스크롤이 생기는 것을 방지
         3. p-4 : 패딩 4
         4. flex flex-col : flex로 자식 table을 세로로 배치
-        5. gap-6 : 자식 table 사이 간격 6
       -->
       <section class="flex-1 min-h-0 p-4 flex flex-col">
         <!-- h2 tag class
@@ -214,8 +226,7 @@
             4. text-sm : 글자 크기 작음
           -->
           <table class="w-full table-fixed border-collapse text-sm">
-            <!-- colgroup tag class -->
-            <colgroup>
+            <colgroup><!-- colgroup tag class -->
               <col class="w-1/5">
               <col class="w-3/5">
               <col class="w-1/5">
@@ -232,8 +243,7 @@
                 <th class="w-1/5 border-b border-gray-200 px-4 py-3 text-center">상태</th>
               </tr>
             </thead>
-            <!-- Table Body -->
-            <tbody>
+            <tbody><!-- Table Body -->
               <tr>
                 <td class="border-b border-gray-200 px-4 py-3 text-center">1</td>
                 <td class="border-b border-gray-200 px-4 py-3 text-left">데이터 1</td>
@@ -252,5 +262,93 @@
       </section>
     </main>
   </page>
+
+  <!-- Tab Control Script -->
+  <script>
+    const tabList = document.getElementById('tab-list');
+    const pageTitle = document.getElementById('page-title');
+
+    // 탭 스타일 클래스 정의
+    const ACTIVE_CLASSES = ['bg-white', 'text-gray-900', 'font-bold', 'shadow-sm', 'active'];
+    const INACTIVE_CLASSES = ['bg-gray-600', 'text-gray-200', 'hover:bg-gray-700'];
+
+    // 탭 활성화 함수
+    function setActiveTab(tabEl) {
+      document.querySelectorAll('.tab-item').forEach(el => {
+        el.classList.remove(...ACTIVE_CLASSES);
+        el.classList.add(...INACTIVE_CLASSES);
+      });
+      tabEl.classList.remove(...INACTIVE_CLASSES);
+      tabEl.classList.add(...ACTIVE_CLASSES);
+
+      // 본문 화면 제목 변경
+      if (pageTitle) {
+        pageTitle.textContent = tabEl.dataset.name;
+      }
+    }
+
+    // 탭 열기 (존재하면 전환, 없으면 새로 생성)
+    function openTab(id, name) {
+      let existingTab = document.querySelector(`.tab-item[data-id="${id}"]`);
+      if (existingTab) {
+        setActiveTab(existingTab);
+        return;
+      }
+
+      // 새 탭 생성
+      const li = document.createElement('li');
+      li.className = 'tab-item flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm cursor-pointer transition-colors shrink-0';
+      li.dataset.id = id;
+      li.dataset.name = name;
+      li.innerHTML = `
+        <span>${name}</span>
+        <button type="button" class="tab-close hover:text-red-400 font-bold ml-1 text-xs leading-none" title="닫기">✕</button>
+      `;
+
+      tabList.appendChild(li);
+      setActiveTab(li);
+    }
+
+    // 1. LNB 메뉴 클릭 시 상단 탭 추가/전환
+    document.querySelectorAll('.lnb-menu').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = link.dataset.id;
+        const name = link.dataset.name;
+        if (id && name) {
+          openTab(id, name);
+        }
+      });
+    });
+
+    // 2. 상단 탭 클릭 및 닫기 이벤트 (이벤트 위임)
+    tabList.addEventListener('click', (e) => {
+      const closeBtn = e.target.closest('.tab-close');
+      const tabItem = e.target.closest('.tab-item');
+
+      if (!tabItem) return;
+
+      // 닫기 버튼 클릭 시
+      if (closeBtn) {
+        e.stopPropagation();
+        const isCurrentActive = tabItem.classList.contains('active');
+        tabItem.remove();
+
+        // 닫은 탭이 활성 탭이었다면 마지막 남은 탭을 활성화
+        if (isCurrentActive) {
+          const remainingTabs = document.querySelectorAll('.tab-item');
+          if (remainingTabs.length > 0) {
+            setActiveTab(remainingTabs[remainingTabs.length - 1]);
+          } else if (pageTitle) {
+            pageTitle.textContent = '선택된 메뉴 없음';
+          }
+        }
+        return;
+      }
+
+      // 탭 자체 클릭 시 전환
+      setActiveTab(tabItem);
+    });
+  </script>
 </body>
 </html>
